@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXEN</title>
+    <meta name="description" content="Strona internetowa NEXEN - Valorant i inne zainteresowania.">
+    <meta name="keywords" content="NEXEN, Valorant, gaming, e-sport, piłka ręczna">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+            50% { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+            100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #4b4b4b);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1da1f2;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        h1 {
+            font-size: 7.5rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            animation: floatText 4s ease-in-out infinite, colorChange 5s linear infinite, shake 1s ease-in-out infinite;
+            will-change: transform, color;
+        }
+
+        .social-text {
+            font-size: 2.38rem;
+            color: #ffffff;
+            font-weight: bold;
+            animation: fadeInUp 1.2s ease-out, textGlow 2s ease-in-out infinite;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            animation: pulse 1.5s infinite;
+            will-change: transform, opacity;
+        }
+
+        .social-links a.twitter {
+            color: #ffffff;
+            background-color: #1da1f2;
+        }
+
+        .social-links a.tiktok {
+            color: #ffffff;
+            background-color: #ff0050;
+        }
+
+        .social-links a:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        .about-container {
+            width: 90%;
+            max-width: 600px;
+            margin: 2rem auto;
+            text-align: center;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            max-height: 400px;
+            animation: fadeInUp 1.6s ease-out;
+        }
+
+        .about-label {
+            font-size: 2.07rem;
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1.8s ease-out, textGlow 2s ease-in-out infinite;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .contact-section {
+            padding: 2rem;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            animation: fadeInUp 1.8s ease-out;
+        }
+
+        .contact-section h2 {
+            font-size: 2.07rem;
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            animation: fadeInUp 2s ease-out, textGlow 2s ease-in-out infinite;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin: 0.5rem 0;
+        }
+
+        .contact-section a {
+            color: #1da1f2;
+            text-decoration: none;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+
+        .discord {
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        @keyframes floatText {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-15px, 15px); }
+            50% { transform: translate(15px, -15px); }
+            75% { transform: translate(-15px, -15px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes colorChange {
+            0% { color: #ffffff; }
+            50% { color: #ff0050; }
+            100% { color: #ffffff; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 5rem;
+            }
+            
+            .social-text {
+                font-size: 1.8rem;
+            }
+            
+            .social-links a {
+                font-size: 1.2rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .about-container, .contact-section {
+                width: 95%;
+                max-width: 100%;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-links">
+        <a href="#about">O mnie</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <header class="header">
+        <h1>NEXEN</h1>
+        <div class="social-text">Zobacz moje sociale!</div>
+        <div class="social-links">
+            <a href="https://x.com/nexxen_" target="_blank" class="twitter" aria-label="Twitter profile">Twitter</a>
+            <a href="https://www.tiktok.com/@nexen_val" target="_blank" class="tiktok" aria-label="TikTok profile">TikTok</a>
+        </div>
+    </header>
+
+    <div id="about" class="about-container">
+        <div class="about-label">O mnie</div>
+        <p class="about-text">
+            Siema, prawdopodobnie znacie mnie jako Nexen, który gra w Valoranta i tak jest to prawda, oraz chciałbym odnieść sukces w tej grze, ale mam dużo więcej zainteresowań i hobby. Tak naprawdę mam na imię Mateusz i już rok trenuję piłkę ręczną (od końcówki 2023r), która naprawdę daje mi wiele satysfakcji! W wolnej chwili uwielbiam spędzać czas ze znajomymi, jeździć na rowerze, grać w piłkę na boisku itd. Niemalże od dziecka interesuje się komputerami i też właśnie dlatego teraz czytasz mój opis na mojej stronie internetowej, bo akurat ostatnio znalazłem w tym hobby. Mam nadzieję, że zostaniesz ze mną na dłużej i będziesz obserwował moją karierę zarówno e-sportową jak i sportową, pozdro!
+        </p>
+    </div>
+
+    <div id="contact" class="contact-section">
+        <h2>Kontakt</h2>
+        <p>Masz pytania? Skontaktuj się ze mną!</p>
+        <p>Email: <a href="mailto:nexen@protonmail.com">nexen@protonmail.com</a></p>
+        <p class="discord">Kontakt discord: pexnexen</p>
+    </div>
+</body>
+</html>
